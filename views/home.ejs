@@ -1,0 +1,12 @@
+<%- include("partials/header") -%>
+    <h1>Home</h1>
+    <p> <%= hSt %> </p>
+    <%posts.forEach(function(element){%>
+     <h1><%=element.pt%></h1>
+     <p><span style="display:block;text-overflow: ellipsis;width: 600px;overflow: hidden; white-space: nowrap;"> <%= element.pb %> </span><a href="/posts/<%=element.pt%>">Read More</a></p>
+    <%});%>
+    <div class="" style="margin:50px 0 25px 0">
+        <button type="button" class="btn btn-dark"><a href="/compose">Publish !</a></button>
+    </div>
+
+<%- include("partials/footer") -%>
